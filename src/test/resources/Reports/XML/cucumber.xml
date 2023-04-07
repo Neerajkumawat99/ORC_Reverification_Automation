@@ -1,63 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="105.278058">
-    <testcase classname="Validate application login Page" name="To validate Orchestration application Launching application" time="6.019446">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="3" time="26.484843">
+    <testcase classname="Validate application login Page" name="To validate Orchestration application Launching application" time="6.786348">
         <system-out><![CDATA[Given Launch the url........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Validate application login Page" name="To validate login page" time="9.41543">
+    <testcase classname="Validate application login Page" name="To validate login page" time="9.4339">
         <system-out><![CDATA[When Enter valid Username...................................................passed
 When Enter Valid Password...................................................passed
 And click on Login button...................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Validate reverify contact page" name="To validate reverification page" time="89.843182">
-        <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@type='email']&quot;}&#10;  (Session info: chrome=111.0.5563.147)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-83ETVLJ', ip: '172.16.17.100', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Astegic\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55709}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5913dbebfb6e8b86c08dad6be8564705&#10;*** Element info: {Using=xpath, value=//input[@type='email']}&#13;&#10;&#9;at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)&#13;&#10;&#9;at org.base.Global.enterData(Global.java:51)&#13;&#10;&#9;at org.stepdefinition.Steps.I_enter_gmail(Steps.java:318)&#13;&#10;&#9;at ✽.Enter email or phone(file:src/test/resources/Features/TC_3_Reverify_Contact.feature:38)&#13;&#10;"><![CDATA[When User Click on reverifycontact Button...................................passed
-And User click on CreateNewJob Button.......................................passed
-And User enter jobname......................................................passed
-And User Select Priority....................................................passed
-Then Click On Browse Button.................................................passed
-And Upload File From Local Directory........................................passed
-And Click on Submit Button..................................................passed
-And Click on Refresh button.................................................passed
-And Click on Tasks Tab......................................................passed
+    <testcase classname="Validate reverify contact page" name="To validate reverification page" time="10.264595">
+        <skipped><![CDATA[And Click on Tasks Tab......................................................passed
 And Click on the TitleSpreadsheet...........................................passed
-And Enter email or phone....................................................failed
-And Click on Next button....................................................undefined
-And Click on Tasks Tab......................................................skipped
-And Click on the TitleSpreadsheet...........................................skipped
-And Click On First Reverify Link In Sales Intel Orchestration Site..........skipped
-And Enter email or phone....................................................skipped
-And Switch To The Parent Window  In Sales Intel Orchestration Site..........skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='email']"}
-  (Session info: chrome=111.0.5563.147)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-83ETVLJ', ip: '172.16.17.100', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Astegic\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55709}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5913dbebfb6e8b86c08dad6be8564705
-*** Element info: {Using=xpath, value=//input[@type='email']}
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
-	at org.base.Global.enterData(Global.java:51)
-	at org.stepdefinition.Steps.I_enter_gmail(Steps.java:318)
-	at ✽.Enter email or phone(file:src/test/resources/Features/TC_3_Reverify_Contact.feature:38)
-]]></failure>
+And Enter email or phone....................................................undefined
+]]></skipped>
     </testcase>
 </testsuite>

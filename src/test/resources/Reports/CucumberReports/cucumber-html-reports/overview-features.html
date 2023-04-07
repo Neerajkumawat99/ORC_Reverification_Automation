@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                14,
-                1,
-                5,
+                6,
+                0,
+                0,
                 0,
                 1
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 21) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 7) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>SalesIntel Site Automation</td>
-      <td>07 Apr 2023, 16:37</td>
+      <td>07 Apr 2023, 18:15</td>
     </tr>
   </tbody>
 </table>
@@ -354,24 +354,24 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="15336029800">15.336</td>
+        <td class="duration" data-value="16121867500">16.121</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_1_912087580.html">Validate reverify contact page</a></td>
 
-        <td      class="passed"    >10</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >5</td>
+        <td      class="passed"    >2</td>
+        <td >0</td>
+        <td >0</td>
         <td >0</td>
         <td   class="undefined" >1</td>
-        <td class="total">17</td>
+        <td class="total">3</td>
 
         <td >0</td>
         <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="89500958700">1:29.500</td>
+        <td class="duration" data-value="10241884400">10.241</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -379,27 +379,27 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>14</td>
-      <td>1</td>
-      <td>5</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>21</td>
+      <td>7</td>
 
       <td>2</td>
       <td>1</td>
       <td>3</td>
 
-      <td class="duration">1:44.836</td>
+      <td class="duration">26.363</td>
       <td>2</td>
     </tr>
     <tr>
       <td></td>
-      <td>66.67%</td>
-      <td>4.76%</td>
-      <td>23.81%</td>
+      <td>85.71%</td>
       <td>0.00%</td>
-      <td>4.76%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>14.29%</td>
       <td></td>
       <td>66.67%</td>
       <td>33.33%</td>

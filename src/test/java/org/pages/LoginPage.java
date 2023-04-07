@@ -255,13 +255,13 @@ public class LoginPage extends Global {
 	{
 		return Spreadsheet;
 	}
-	public WebElement Gmail() {
-		return Gmail;
-	}
+//	public WebElement Gmail() {
+//		return Gmail;
+//	}
 
-	public WebElement getFirstReverifyLink() {
-		return firstReverifyLink;
-	}
+//	public WebElement getFirstReverifyLink() {
+//		return firstReverifyLink;
+//	}
 
 //	public WebElement getRememberMeCheckBox() {
 //		return rememberMeCheckBox;

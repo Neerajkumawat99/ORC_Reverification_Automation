@@ -52,11 +52,11 @@ public class Steps extends Global {
         launchURL(ReadDatafromJson("Contact_Name", "url"));
     }
 
-    @When("Click On First Reverify Link In Sales Intel Orchestration Site")
-    public void click_On_First_Reverify_Link_In_Sales_Intel_Orchestration_Site() throws Throwable {
-        clickButton(PageObjectManager.getInstance().getLoginPage().getFirstReverifyLink());
-        Thread.sleep(2000);
-    }
+//    @When("Click On First Reverify Link In Sales Intel Orchestration Site")
+//    public void click_On_First_Reverify_Link_In_Sales_Intel_Orchestration_Site() throws Throwable {
+//        clickButton(PageObjectManager.getInstance().getLoginPage().getFirstReverifyLink());
+//        Thread.sleep(2000);
+//    }
 
 
 
@@ -313,22 +313,22 @@ public class Steps extends Global {
 //    }
 
 
-    @When("Enter email or phone")
-    public void I_enter_gmail() throws Throwable {
-        enterData(PageObjectManager.getInstance().getLoginPage().Gmail(), ReadDatafromJson("Contact_Name", "EmailID"));
-        log.info("Email is entered");
-    }
-    @When("Switch To The Parent Window  In Sales Intel Orchestration Site")
-    public void switch_To_The_Parent_Window_In_Sales_Intel_Orchestration_Site() {
-        String parentWindow = driver.getWindowHandle();
-        Set<String> allWindows = driver.getWindowHandles();
-        System.out.println(allWindows);
-        List<String> list = new ArrayList<String>();
-        list.addAll(allWindows);
-        driver.switchTo().window(list.get(0));
-        System.out.println(driver.getWindowHandle());
-        System.out.println("Switched To Parent Window - The Title Of Window is: " + driver.getTitle());
-    }
+//    @When("Enter email or phone")
+//    public void I_enter_gmail() throws Throwable {
+//        enterData(PageObjectManager.getInstance().getLoginPage().Gmail(), ReadDatafromJson("Contact_Name", "EmailID"));
+//        log.info("Email is entered");
+//    }
+//    @When("Switch To The Parent Window  In Sales Intel Orchestration Site")
+//    public void switch_To_The_Parent_Window_In_Sales_Intel_Orchestration_Site() {
+//        String parentWindow = driver.getWindowHandle();
+//        Set<String> allWindows = driver.getWindowHandles();
+//        System.out.println(allWindows);
+//        List<String> list = new ArrayList<String>();
+//        list.addAll(allWindows);
+//        driver.switchTo().window(list.get(0));
+//        System.out.println(driver.getWindowHandle());
+//        System.out.println("Switched To Parent Window - The Title Of Window is: " + driver.getTitle());
+//    }
 
 
 }
