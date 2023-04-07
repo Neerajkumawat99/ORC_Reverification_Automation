@@ -37,3 +37,9 @@ Feature: Validate reverify contact page
     And Click on the TitleSpreadsheet
     And Enter email or phone
     And Click on Next button
+    And Click on Tasks Tab
+    And Click on the TitleSpreadsheet
+    And Click On First Reverify Link In Sales Intel Orchestration Site
+    And Enter email or phone
+    And Switch To The Parent Window  In Sales Intel Orchestration Site
+

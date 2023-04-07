@@ -86,6 +86,13 @@ public class LoginPage extends Global {
 
 	@FindBy(xpath = "//input[@type='email']")
 	private WebElement Gmail;
+
+	@FindBy(xpath = "//a[contains(text(),'Tasks')]")
+	private WebElement taskField;
+
+	@FindBy(xpath = "(//a[@target='_blank'])[1]")
+	private WebElement firstReverifyLink;
+
 	public LoginPage() throws Throwable {
 		PageFactory.initElements(driver, this);
 	}
@@ -240,19 +247,25 @@ public class LoginPage extends Global {
 		return Submit();
 	}
 
-	public WebElement Tasks()
-	{
+	public WebElement Tasks() {
 		return Tasks;
 	}
 
-	public WebElement Spreadsheet()
+		public WebElement Spreadsheet()
 	{
 		return Spreadsheet;
 	}
-	public WebElement Gmail()
-	{
+	public WebElement Gmail() {
 		return Gmail;
 	}
+
+	public WebElement getFirstReverifyLink() {
+		return firstReverifyLink;
+	}
+
+//	public WebElement getRememberMeCheckBox() {
+//		return rememberMeCheckBox;
+//	}
 }
 
 

@@ -26,8 +26,10 @@ import io.cucumber.java.en.When;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class Steps extends Global {
     public static Logger log;
@@ -49,6 +51,24 @@ public class Steps extends Global {
         implicitWait();
         launchURL(ReadDatafromJson("Contact_Name", "url"));
     }
+
+    @When("Click On First Reverify Link In Sales Intel Orchestration Site")
+    public void click_On_First_Reverify_Link_In_Sales_Intel_Orchestration_Site() throws Throwable {
+        clickButton(PageObjectManager.getInstance().getLoginPage().getFirstReverifyLink());
+        Thread.sleep(2000);
+    }
+
+
+
+//    @Given("Launch the url")
+//    public void launch_the_url1() throws Throwable{
+//        driver=getDriver();
+//        maximizeWindow();
+//        implicitWait();
+//        launchURL(ReadDatafromJson("Contact_Name","url1"));
+//    }
+
+
 //
 //	@When("Enter Valid Username")
 //	public void i_enter_the_username() throws Throwable {
@@ -276,17 +296,39 @@ public class Steps extends Global {
         clickButton(PageObjectManager.getInstance().getLoginPage().GetTier());
     }
 
+
     @When("Click on the TitleSpreadsheet")
     public void i_click_on_title_spreadsheet() throws Throwable {
         clickButton(PageObjectManager.getInstance().getLoginPage().Spreadsheet());
         log.info("User clicked on titleSpreadsheet");
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
+//    @Given("Launch the url1")
+//    public void launch_the_url1() throws Throwable {
+//        driver = getDriver();
+//        maximizeWindow();
+//        implicitWait();
+//        launchURL(ReadDatafromJson("Contact_Name", "url1"));
+//    }
+
+
     @When("Enter email or phone")
-    public void I_enter_email() throws Throwable {
+    public void I_enter_gmail() throws Throwable {
         enterData(PageObjectManager.getInstance().getLoginPage().Gmail(), ReadDatafromJson("Contact_Name", "EmailID"));
         log.info("Email is entered");
     }
+    @When("Switch To The Parent Window  In Sales Intel Orchestration Site")
+    public void switch_To_The_Parent_Window_In_Sales_Intel_Orchestration_Site() {
+        String parentWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+        System.out.println(allWindows);
+        List<String> list = new ArrayList<String>();
+        list.addAll(allWindows);
+        driver.switchTo().window(list.get(0));
+        System.out.println(driver.getWindowHandle());
+        System.out.println("Switched To Parent Window - The Title Of Window is: " + driver.getTitle());
+    }
+
 
 }

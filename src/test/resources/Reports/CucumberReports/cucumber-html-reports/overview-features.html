@@ -52,7 +52,7 @@ $(document).ready(function() {
             data: [
                 14,
                 1,
-                0,
+                5,
                 0,
                 1
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 16) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 21) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>SalesIntel Site Automation</td>
-      <td>06 Apr 2023, 12:30</td>
+      <td>07 Apr 2023, 16:37</td>
     </tr>
   </tbody>
 </table>
@@ -354,7 +354,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="15743281700">15.743</td>
+        <td class="duration" data-value="15336029800">15.336</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -362,16 +362,16 @@ $(document).ready(function() {
 
         <td      class="passed"    >10</td>
         <td      class="failed"    >1</td>
-        <td >0</td>
+        <td     class="skipped"   >5</td>
         <td >0</td>
         <td   class="undefined" >1</td>
-        <td class="total">12</td>
+        <td class="total">17</td>
 
         <td >0</td>
         <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="84491638900">1:24.491</td>
+        <td class="duration" data-value="89500958700">1:29.500</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -381,25 +381,25 @@ $(document).ready(function() {
       <td></td>
       <td>14</td>
       <td>1</td>
-      <td>0</td>
+      <td>5</td>
       <td>0</td>
       <td>1</td>
-      <td>16</td>
+      <td>21</td>
 
       <td>2</td>
       <td>1</td>
       <td>3</td>
 
-      <td class="duration">1:40.234</td>
+      <td class="duration">1:44.836</td>
       <td>2</td>
     </tr>
     <tr>
       <td></td>
-      <td>87.50%</td>
-      <td>6.25%</td>
+      <td>66.67%</td>
+      <td>4.76%</td>
+      <td>23.81%</td>
       <td>0.00%</td>
-      <td>0.00%</td>
-      <td>6.25%</td>
+      <td>4.76%</td>
       <td></td>
       <td>66.67%</td>
       <td>33.33%</td>
