@@ -102,8 +102,17 @@ public class LoginPage extends Global {
     @FindBy(xpath = "//button[contains(text(),'Yes')]")
     private WebElement ConfirmationYes;
 
-    @FindBy(xpath ="//a[@href='/orchestration/taskdashboard']" )
+    @FindBy(xpath = "//a[@href='/orchestration/taskdashboard']")
     private WebElement SearchTab;
+
+    @FindBy(xpath = "//input[@placeholder='Search by Job Name']")
+    private WebElement Searchbyjobname;
+
+    @FindBy(xpath = "//button[text()=' Search ']")
+    private WebElement SearchButton;
+
+    @FindBy(xpath="(//div[contains(text(),'HIGH')])[1]")
+    private WebElement ResultPriority;
 
     public LoginPage() throws Throwable {
         PageFactory.initElements(driver, this);
@@ -271,8 +280,20 @@ public class LoginPage extends Global {
         return ConfirmationYes;
     }
 
-    public WebElement SearchTab(){
+    public WebElement SearchTab() {
         return SearchTab;
+    }
+
+    public WebElement Searchbyjobname() {
+        return Searchbyjobname;
+    }
+
+    public WebElement SearchButton() {
+        return SearchButton;
+    }
+
+    public WebElement ResultPriority(){
+        return ResultPriority;
     }
 //	public WebElement Gmail() {
 //		return Gmail;

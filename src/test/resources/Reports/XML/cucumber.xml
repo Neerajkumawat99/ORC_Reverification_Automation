@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="86.041445">
-    <testcase classname="Validate application login Page" name="To validate Orchestration application Launching application" time="4.952681">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="25.421093">
+    <testcase classname="Validate application login Page" name="To validate Orchestration application Launching application" time="5.793646">
         <system-out><![CDATA[Given Launch the url........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Validate application login Page" name="To validate login page" time="9.251253">
-        <system-out><![CDATA[When Enter valid Username...................................................passed
+    <testcase classname="Validate application login Page" name="To validate login page" time="15.961263">
+        <system-out><![CDATA[When Enter invalid Username.................................................passed
+When Enter invalid Password.................................................passed
+And click on Login button...................................................passed
+When Enter valid Username...................................................passed
 When Enter Valid Password...................................................passed
 And click on Login button...................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Validate reverify contact page" name="To validate reverification page" time="71.837511">
+    <testcase classname="Validate reverify contact page" name="To validate reverification page" time="3.666184">
         <system-out><![CDATA[When User Click on reverifycontact Button...................................passed
-And User click on CreateNewJob Button.......................................passed
-And User enter jobname......................................................passed
-And User Select Priority....................................................passed
-Then Click On Browse Button.................................................passed
-And Upload File From Local Directory........................................passed
-And Click on Submit Button..................................................passed
-And Click on Refresh button.................................................passed
-And Click on Tasks Tab......................................................passed
-And Click on Submit.........................................................passed
-And Click on Yes to Confirmation popup......................................passed
-And Click on Search Tab.....................................................passed
+And Search by Job Name......................................................passed
+And Click on Search button..................................................passed
+And verify Job name in result...............................................passed
+And verify Priority.........................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

@@ -56,6 +56,36 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
+  "name": "Enter invalid Username",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Steps.I_enter_invalid_username()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Enter invalid Password",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Steps.i_enter_invalid_password()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on Login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Steps.i_click_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "Enter valid Username",
   "keyword": "When "
 });
@@ -124,111 +154,41 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User click on CreateNewJob Button",
+  "name": "Search by Job Name",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.i_click_on_create_new_job_button()"
+  "location": "Steps.i_Search_by_jobname()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User enter jobname",
+  "name": "Click on Search button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.i_entered_jobname()"
+  "location": "Steps.i_click_on_search_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User Select Priority",
+  "name": "verify Job name in result",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.i_select_high_priority()"
+  "location": "Steps.I_Check_JobnameInResult()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click On Browse Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Steps.I_Click_Browse()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Upload File From Local Directory",
+  "name": "verify Priority",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Steps.I_Upload_File_Directory()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Submit Button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Steps.i_click_on_submit_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Refresh button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Steps.i_click_on_refresh_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Tasks Tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Steps.I_Click_on_tasks_tab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Submit",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Steps.i_click_on_submit()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Yes to Confirmation popup",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Steps.i_click_on_confirmation_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Search Tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "Steps.i_click_on_search_tab()"
+  "location": "Steps.I_check_priority()"
 });
 formatter.result({
   "status": "passed"

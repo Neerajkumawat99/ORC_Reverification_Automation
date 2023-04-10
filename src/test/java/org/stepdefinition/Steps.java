@@ -22,6 +22,8 @@ import com.aventstack.extentreports.GherkinKeyword;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.internal.thread.ThreadTimeoutException;
+//import sun.jvm.hotspot.debugger.Page;
 //import sun.jvm.hotspot.debugger.Page;
 //import sun.jvm.hotspot.debugger.Page;
 //import sun.jvm.hotspot.debugger.Page;
@@ -71,7 +73,7 @@ public class Steps extends Global {
 //    }
 
 
-//
+    //
 //	@When("Enter Valid Username")
 //	public void i_enter_the_username() throws Throwable {
 //		log = readLog4jData();
@@ -80,11 +82,29 @@ public class Steps extends Global {
 //				readPropertyFileData().getProperty("UserName"));
 //		log.info("User enter the correct username");
 //	}
+    @When("Enter invalid Username")
+    public void I_enter_invalid_username() throws Throwable {
+        log = readLog4jData();
+        log.info("user is navigated to Orchestration site");
+        enterData(PageObjectManager.getInstance().getLoginPage().getUserName(), ReadDatafromJson("Contact_Name", "Username1"));
+        log.info("User entered incorrect username");
+        Thread.sleep(3000);
+    }
+
+
+    @When("Enter invalid Password")
+    public void i_enter_invalid_password() throws Throwable {
+        log = readLog4jData();
+        log.info("user is navigated to Orchestration site");
+        enterData(PageObjectManager.getInstance().getLoginPage().getPassword(), ReadDatafromJson("Contact_Name", "Password1"));
+        log.info("User entered incorrect password");
+    }
 
     @And("Enter valid Username")
     public void i_enter_the_username() throws Throwable {
         log = readLog4jData();
-        log.info("User is navigate to Salesforce site");
+        log.info("User is navigated to Orchestration site");
+        clearText(PageObjectManager.getInstance().getLoginPage().getUserName());
         enterData(PageObjectManager.getInstance().getLoginPage().getUserName(), ReadDatafromJson("Contact_Name", "UserName"));
         log.info("User enter the correct username");
         Thread.sleep(3000);
@@ -98,6 +118,9 @@ public class Steps extends Global {
 //	}
     @And("Enter Valid Password")
     public void i_enter_the_password() throws Throwable {
+        log = readLog4jData();
+        log.info("User is navigated to Orchestration site");
+        clearText(PageObjectManager.getInstance().getLoginPage().getPassword());
         enterData(PageObjectManager.getInstance().getLoginPage().getPassword(), ReadDatafromJson("Contact_Name", "Password"));
         log.info("User enter the correct password");
         Thread.sleep(3000);
@@ -175,13 +198,15 @@ public class Steps extends Global {
         clickButton(PageObjectManager.getInstance().getLoginPage().RefreshButton());
         log.info("User clicked on refresh button");
         Thread.sleep(5000);
+
+
     }
 
     @When("Click on Tasks Tab")
     public void I_Click_on_tasks_tab() throws Throwable {
         clickButton(PageObjectManager.getInstance().getLoginPage().Tasks());
         log.info("User clicked on Tasks tab");
-        Thread.sleep(5000);
+        Thread.sleep(300000);
     }
 
     @And("Click on Yes Button")
@@ -214,13 +239,14 @@ public class Steps extends Global {
     public void I_Click_Browse() throws Throwable {
         Thread.sleep(5000);
         clickButton(PageObjectManager.getInstance().getLoginPage().Choosefile());
-        log.info("Click On Browse Button");
+        log.info("Clicked On Browse Button");
     }
 
     @And("Upload File From Local Directory")
     public void I_Upload_File_Directory() throws Throwable {
         Thread.sleep(5000);
         uploadfilefromlocal("D:\\ReverifyContact\\TestCase1.csv");
+        log.info("User selected file from Local Directory");
         Thread.sleep(5000);
     }
 
@@ -298,6 +324,32 @@ public class Steps extends Global {
         clickButton(PageObjectManager.getInstance().getLoginPage().GetTier());
     }
 
+    @And("Search by Job Name")
+    public void i_Search_by_jobname() throws Throwable {
+        enterData(PageObjectManager.getInstance().getLoginPage().Searchbyjobname(), ReadDatafromJson("Contact_Name", "JobName"));
+        log.info("user entered job name in search by job name");
+
+    }
+
+    @And("verify Job name in result")
+    public void I_Check_JobnameInResult() throws Throwable {
+        String UploadedJobName = ReadDatafromJson("Contact_Name", "JobName");
+        Assert.assertTrue(driver.findElement(By.xpath("(//span[contains(text(),'" + UploadedJobName + "')])[1]")).isDisplayed());
+        log.info("Job name [" + UploadedJobName + "] is displayed");
+    }
+
+    @An("verify Priority")
+    public void I_check_priority() throws Throwable {
+        Assert.assertTrue(PageObjectManager.getInstance().getLoginPage().ResultPriority().isDisplayed());
+        String PriorityInResult = PageObjectManager.getInstance().getLoginPage().ResultPriority().getText();
+        log.info("ResultPriority[" + PriorityInResult + "] is displayed");
+    }
+
+    @And("Click on Search button")
+    public void i_click_on_search_button() throws Throwable {
+        clickButton(PageObjectManager.getInstance().getLoginPage().SearchButton());
+    }
+
 
     @When("Click on the TitleSpreadsheet")
     public void i_click_on_title_spreadsheet() throws Throwable {
@@ -338,15 +390,16 @@ public class Steps extends Global {
         log.info("user clicked on submit button");
         Thread.sleep(2500);
     }
+
     @When("Click on Yes to Confirmation popup")
-    public void i_click_on_confirmation_button() throws Throwable{
+    public void i_click_on_confirmation_button() throws Throwable {
         clickButton(PageObjectManager.getInstance().getLoginPage().ConfirmationYes());
         log.info("User clicked on Yes to Confirmation popup");
         Thread.sleep(3000);
     }
+
     @When("Click on Search Tab")
-    public void i_click_on_search_tab() throws Throwable{
-        clickButton(PageObjectManager.getInstance().getLoginPage().SearchTab());
+    public void i_click_on_search_tab() throws Throwable {
         log.info("user clicked on Search tab");
         Thread.sleep(2500);
     }
