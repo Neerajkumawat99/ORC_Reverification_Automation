@@ -346,7 +346,6 @@ public class Steps extends Global {
     }
     @When("Click on Search Tab")
     public void i_click_on_search_tab() throws Throwable{
-        clickButton(PageObjectManager.getInstance().getLoginPage().SearchTab());
         log.info("user clicked on Search tab");
         Thread.sleep(2500);
     }
