@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="3" time="26.484843">
-    <testcase classname="Validate application login Page" name="To validate Orchestration application Launching application" time="6.786348">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="86.041445">
+    <testcase classname="Validate application login Page" name="To validate Orchestration application Launching application" time="4.952681">
         <system-out><![CDATA[Given Launch the url........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Validate application login Page" name="To validate login page" time="9.4339">
+    <testcase classname="Validate application login Page" name="To validate login page" time="9.251253">
         <system-out><![CDATA[When Enter valid Username...................................................passed
 When Enter Valid Password...................................................passed
 And click on Login button...................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Validate reverify contact page" name="To validate reverification page" time="10.264595">
-        <skipped><![CDATA[And Click on Tasks Tab......................................................passed
-And Click on the TitleSpreadsheet...........................................passed
-And Enter email or phone....................................................undefined
-]]></skipped>
+    <testcase classname="Validate reverify contact page" name="To validate reverification page" time="71.837511">
+        <system-out><![CDATA[When User Click on reverifycontact Button...................................passed
+And User click on CreateNewJob Button.......................................passed
+And User enter jobname......................................................passed
+And User Select Priority....................................................passed
+Then Click On Browse Button.................................................passed
+And Upload File From Local Directory........................................passed
+And Click on Submit Button..................................................passed
+And Click on Refresh button.................................................passed
+And Click on Tasks Tab......................................................passed
+And Click on Submit.........................................................passed
+And Click on Yes to Confirmation popup......................................passed
+And Click on Search Tab.....................................................passed
+]]></system-out>
     </testcase>
 </testsuite>

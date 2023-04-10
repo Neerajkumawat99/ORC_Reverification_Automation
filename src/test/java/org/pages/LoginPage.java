@@ -2,6 +2,8 @@ package org.pages;
 
 //import jdk.jfr.Enabled;
 
+//import jdk.internal.vm.annotation.DontInline;
+
 import net.bytebuddy.asm.Advice;
 import org.base.Global;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,7 @@ import java.util.concurrent.RecursiveTask;
 
 public class LoginPage extends Global {
 
-	//	public static String Readuserdata()
+    //	public static String Readuserdata()
 //	{
 //		String name = readPropertyFileData().getProperty("FirstName1");
 //		return name;
@@ -20,241 +22,258 @@ public class LoginPage extends Global {
 //	public static String name = Readuserdata();
 //
 //	public static String usernamexpath = "//*[contains(text(),"\"name\"")]";
-	@FindBy(xpath = "//*[@placeholder='User Name']")
-	private WebElement userName;
-	@FindBy(xpath = "//input[@type='password']")
-	private WebElement password;
-	@FindBy(xpath = "//button[@type='submit']")
-	private WebElement loginCTA;
-	//Create company
-	@FindBy(xpath = "//button[@title='Create Company']")
-	private WebElement CreateCompany;
+    @FindBy(xpath = "//*[@placeholder='User Name']")
+    private WebElement userName;
+    @FindBy(xpath = "//input[@type='password']")
+    private WebElement password;
+    @FindBy(xpath = "//button[@type='submit']")
+    private WebElement loginCTA;
+    //Create company
+    @FindBy(xpath = "//button[@title='Create Company']")
+    private WebElement CreateCompany;
 
-	@FindBy(xpath = "//button[@title='Reverify Contact']")
-	private WebElement ReverifyContact;
+    @FindBy(xpath = "//button[@title='Reverify Contact']")
+    private WebElement ReverifyContact;
 
-	@FindBy(xpath = "//button[text()=' Create New Job ']")
-	private WebElement CreateNewJobButton;
+    @FindBy(xpath = "//button[text()=' Create New Job ']")
+    private WebElement CreateNewJobButton;
 
-	@FindBy(xpath = "//*[@placeholder='Job Name']")
-	private WebElement getjobname;
+    @FindBy(xpath = "//*[@placeholder='Job Name']")
+    private WebElement getjobname;
 
-	@FindBy(xpath = "//input[@id='express']")
-	private WebElement Highp;
+    @FindBy(xpath = "//input[@id='express']")
+    private WebElement Highp;
 
-	@FindBy(xpath = "//input[@id='active']")
-	private WebElement Active;
+    @FindBy(xpath = "//input[@id='active']")
+    private WebElement Active;
 
-	@FindBy(xpath = "//input[@id='onscreenentry']")
-	private WebElement Onscreen;
+    @FindBy(xpath = "//input[@id='onscreenentry']")
+    private WebElement Onscreen;
 
-	@FindBy(xpath = "//input[@placeholder='Domain Name']")
-	private WebElement DomainName;
+    @FindBy(xpath = "//input[@placeholder='Domain Name']")
+    private WebElement DomainName;
 
-	@FindBy(xpath = "//input[@placeholder='Country Code']")
-	private WebElement CountryCode;
+    @FindBy(xpath = "//input[@placeholder='Country Code']")
+    private WebElement CountryCode;
 
-	@FindBy(xpath = "(//button[@type='submit'])[2]")
-	private WebElement Submitbutton;
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    private WebElement Submitbutton;
 
-	@FindBy(xpath = "//button[text()='Yes']")
-	private WebElement YesButton;
+    @FindBy(xpath = "//button[text()='Yes']")
+    private WebElement YesButton;
 
-	@FindBy(xpath = "//button[text()='Refresh']")
-	private WebElement RefreshButton;
+    @FindBy(xpath = "//button[text()='Refresh']")
+    private WebElement RefreshButton;
 
-	@FindBy(xpath = "(//input[@type='radio'])[3]")
-	private WebElement Allbutton;
+    @FindBy(xpath = "(//input[@type='radio'])[3]")
+    private WebElement Allbutton;
 
-	@FindBy(xpath = "(//*[@class='page-link'])[3]")
-	private WebElement Scrolldown;
+    @FindBy(xpath = "(//*[@class='page-link'])[3]")
+    private WebElement Scrolldown;
 
-	@FindBy(xpath = "//*[contains(text(),'Task Dashboard')]")
-	private WebElement Scrollup;
+    @FindBy(xpath = "//*[contains(text(),'Task Dashboard')]")
+    private WebElement Scrollup;
 
-	@FindBy(xpath = "//*[contains(text(),'Choose File')]")
-	private WebElement Choosefile;
+    @FindBy(xpath = "//*[contains(text(),'Choose File')]")
+    private WebElement Choosefile;
 
-	@FindBy(xpath = "(//*[@title='Download Results'])[1]")
-	private WebElement DownloadCSV;
+    @FindBy(xpath = "(//*[@title='Download Results'])[1]")
+    private WebElement DownloadCSV;
 
-	@FindBy(xpath = "//a[@href='/orchestration/tasks']")
-	private WebElement Tasks;
+    @FindBy(xpath = "//a[@href='/orchestration/tasks']")
+    private WebElement Tasks;
 
-	@FindBy(xpath = "//a[@href='https://docs.google.com/spreadsheets/d/15tEJ-Gkd0H_eZ_ndV_fT4beg5Qm9_xLCsQtG6HEVt6w/edit']")
-	private WebElement Spreadsheet;
+    @FindBy(xpath = "//a[@href='https://docs.google.com/spreadsheets/d/15tEJ-Gkd0H_eZ_ndV_fT4beg5Qm9_xLCsQtG6HEVt6w/edit']")
+    private WebElement Spreadsheet;
 
-	@FindBy(xpath = "//input[@type='email']")
-	private WebElement Gmail;
+    @FindBy(xpath = "//input[@type='email']")
+    private WebElement Gmail;
 
-	@FindBy(xpath = "//a[contains(text(),'Tasks')]")
-	private WebElement taskField;
+    @FindBy(xpath = "//a[contains(text(),'Tasks')]")
+    private WebElement taskField;
 
-	@FindBy(xpath = "(//a[@target='_blank'])[1]")
-	private WebElement firstReverifyLink;
+    @FindBy(xpath = "(//a[@target='_blank'])[1]")
+    private WebElement firstReverifyLink;
 
-	public LoginPage() throws Throwable {
-		PageFactory.initElements(driver, this);
-	}
 
-	public WebElement getUserName() {
-		return userName;
-	}
+    @FindBy(xpath = "//button[text()=' Submit ']")
+    private WebElement button;
 
-	public WebElement getPassword() {
-		return password;
-	}
+    @FindBy(xpath = "//button[contains(text(),'Yes')]")
+    private WebElement ConfirmationYes;
 
-	public WebElement getLoginCTA() {
-		return loginCTA;
-	}
+    @FindBy(xpath ="//a[@href='/orchestration/taskdashboard']" )
+    private WebElement SearchTab;
 
-	public WebElement CreateCompany() {
-		return CreateCompany;
-	}
+    public LoginPage() throws Throwable {
+        PageFactory.initElements(driver, this);
+    }
 
-	public WebElement CreateNewJobButton() {
-		return CreateNewJobButton;
-	}
+    public WebElement getUserName() {
+        return userName;
+    }
 
-	public WebElement getjobname() {
-		return getjobname;
-	}
+    public WebElement getPassword() {
+        return password;
+    }
 
-	public WebElement Highp() {
-		return Highp;
-	}
+    public WebElement getLoginCTA() {
+        return loginCTA;
+    }
 
-	public WebElement Active() {
-		return Active;
-	}
+    public WebElement CreateCompany() {
+        return CreateCompany;
+    }
 
-	public WebElement Onscreen() {
-		return Onscreen;
-	}
+    public WebElement CreateNewJobButton() {
+        return CreateNewJobButton;
+    }
 
-	public WebElement DomainName() {
-		return DomainName;
+    public WebElement getjobname() {
+        return getjobname;
+    }
 
-	}
+    public WebElement Highp() {
+        return Highp;
+    }
 
-	public WebElement CountryCode() {
-		return CountryCode;
-	}
+    public WebElement Active() {
+        return Active;
+    }
 
-	public WebElement Submitbutton() {
-		return Submitbutton;
-	}
+    public WebElement Onscreen() {
+        return Onscreen;
+    }
 
-	public WebElement YesButton() {
-		return YesButton;
-	}
+    public WebElement DomainName() {
+        return DomainName;
 
-	public WebElement RefreshButton() {
-		return RefreshButton;
-	}
+    }
 
-	public WebElement Allbutton() {
-		return Allbutton;
-	}
+    public WebElement CountryCode() {
+        return CountryCode;
+    }
 
-	//	public WebElement getScrolldown() {
+    public WebElement Submitbutton() {
+        return Submitbutton;
+    }
+
+    public WebElement YesButton() {
+        return YesButton;
+    }
+
+    public WebElement RefreshButton() {
+        return RefreshButton;
+    }
+
+    public WebElement Allbutton() {
+        return Allbutton;
+    }
+
+    //	public WebElement getScrolldown() {
 //		return Scrolldown;
 //	}
 //
 //	public WebElement getScrollup() {
 //		return Scrollup;
 //	}
-	public WebElement Choosefile() {
-		return Choosefile;
-	}
+    public WebElement Choosefile() {
+        return Choosefile;
+    }
 
-	public WebElement DownloadCSV() {
-		return DownloadCSV;
-	}
+    public WebElement DownloadCSV() {
+        return DownloadCSV;
+    }
 
-	/////////ReverifyContact 17-03-2023
-	public WebElement ReverifyContact() {
-		return ReverifyContact;
-	}
+    /////////ReverifyContact 17-03-2023
+    public WebElement ReverifyContact() {
+        return ReverifyContact;
+    }
 
-	public WebElement CreatenewjobButton() {
-		return CreateNewJobButton;
-	}
+    public WebElement CreatenewjobButton() {
+        return CreateNewJobButton;
+    }
 
-	public WebElement GetJobname() {
-		return GetJobname();
-	}
+    public WebElement GetJobname() {
+        return GetJobname();
+    }
 
-	public WebElement GetPriority() {
-		return GetPriority();
-	}
+    public WebElement GetPriority() {
+        return GetPriority();
+    }
 
-	public WebElement OnScreenEntry() {
-		return OnScreenEntry();
-	}
+    public WebElement OnScreenEntry() {
+        return OnScreenEntry();
+    }
 
-	public WebElement ContactID() {
-		return ContactID();
-	}
+    public WebElement ContactID() {
+        return ContactID();
+    }
 
-	public WebElement LinkedinCorrect() {
-		return LinkedinCorrect();
-	}
+    public WebElement LinkedinCorrect() {
+        return LinkedinCorrect();
+    }
 
-	public WebElement LinkedInUrl() {
-		return LinkedInUrl();
-	}
+    public WebElement LinkedInUrl() {
+        return LinkedInUrl();
+    }
 
-	public WebElement FirstName() {
-		return FirstName();
-	}
+    public WebElement FirstName() {
+        return FirstName();
+    }
 
-	public WebElement LastName() {
-		return LastName();
-	}
+    public WebElement LastName() {
+        return LastName();
+    }
 
-	public WebElement Title() {
-		return Title();
-	}
+    public WebElement Title() {
+        return Title();
+    }
 
-	public WebElement Email() {
-		return Email();
-	}
+    public WebElement Email() {
+        return Email();
+    }
 
-	public WebElement CompanyName() {
-		return CompanyName();
-	}
+    public WebElement CompanyName() {
+        return CompanyName();
+    }
 
-	public WebElement CompanyDomain() {
-		return CompanyDomain();
-	}
+    public WebElement CompanyDomain() {
+        return CompanyDomain();
+    }
 
-	public WebElement PersonalEmail() {
-		return PersonalEmail();
-	}
+    public WebElement PersonalEmail() {
+        return PersonalEmail();
+    }
 
-	public WebElement IsInternational() {
-		return IsInternational();
-	}
+    public WebElement IsInternational() {
+        return IsInternational();
+    }
 
-	public WebElement GetTier() {
-		return GetTier();
+    public WebElement GetTier() {
+        return GetTier();
 
-	}
+    }
 
-	public WebElement Submit() {
-		return Submit();
-	}
+    public WebElement button() {
+        return button;
+    }
 
-	public WebElement Tasks() {
-		return Tasks;
-	}
+    public WebElement Tasks() {
+        return Tasks;
+    }
 
-		public WebElement Spreadsheet()
-	{
-		return Spreadsheet;
-	}
+    public WebElement Spreadsheet() {
+        return Spreadsheet;
+    }
+
+    public WebElement ConfirmationYes() {
+        return ConfirmationYes;
+    }
+
+    public WebElement SearchTab(){
+        return SearchTab;
+    }
 //	public WebElement Gmail() {
 //		return Gmail;
 //	}
@@ -267,6 +286,7 @@ public class LoginPage extends Global {
 //		return rememberMeCheckBox;
 //	}
 }
+
 
 
 

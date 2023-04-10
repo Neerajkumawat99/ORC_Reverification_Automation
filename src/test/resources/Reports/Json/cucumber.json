@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-07T12:44:51.725Z",
+        "start_timestamp": "2023-04-10T06:02:22.335Z",
         "before": [
           {
             "result": {
-              "duration": 6652800,
+              "duration": 3095800,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 1736600,
+              "duration": 1055900,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6699704100,
+              "duration": 4906054100,
               "status": "passed"
             },
             "line": 5,
@@ -59,11 +59,11 @@
         ]
       },
       {
-        "start_timestamp": "2023-04-07T12:44:58.624Z",
+        "start_timestamp": "2023-04-10T06:02:27.345Z",
         "before": [
           {
             "result": {
-              "duration": 879500,
+              "duration": 368300,
               "status": "passed"
             },
             "match": {
@@ -78,7 +78,7 @@
         "after": [
           {
             "result": {
-              "duration": 1412300,
+              "duration": 907100,
               "status": "passed"
             },
             "match": {
@@ -91,7 +91,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3163695500,
+              "duration": 3113150600,
               "status": "passed"
             },
             "line": 9,
@@ -103,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 3174092300,
+              "duration": 3064680200,
               "status": "passed"
             },
             "line": 10,
@@ -115,7 +115,7 @@
           },
           {
             "result": {
-              "duration": 3084375600,
+              "duration": 3066322600,
               "status": "passed"
             },
             "line": 11,
@@ -150,11 +150,11 @@
     "line": 24,
     "elements": [
       {
-        "start_timestamp": "2023-04-07T12:45:08.152Z",
+        "start_timestamp": "2023-04-10T06:02:36.610Z",
         "before": [
           {
             "result": {
-              "duration": 2123300,
+              "duration": 501200,
               "status": "passed"
             },
             "match": {
@@ -169,7 +169,7 @@
         "after": [
           {
             "result": {
-              "duration": 855500,
+              "duration": 782200,
               "status": "passed"
             },
             "match": {
@@ -182,10 +182,106 @@
         "steps": [
           {
             "result": {
-              "duration": 5098587600,
+              "duration": 2075921500,
               "status": "passed"
             },
             "line": 28,
+            "name": "User Click on reverifycontact Button",
+            "match": {
+              "location": "Steps.i_click_on_reverify_contact()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3067337100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User click on CreateNewJob Button",
+            "match": {
+              "location": "Steps.i_click_on_create_new_job_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3092527300,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User enter jobname",
+            "match": {
+              "location": "Steps.i_entered_jobname()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58896200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User Select Priority",
+            "match": {
+              "location": "Steps.i_select_high_priority()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5072853600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Click On Browse Button",
+            "match": {
+              "location": "Steps.I_Click_Browse()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15079471600,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Upload File From Local Directory",
+            "match": {
+              "location": "Steps.I_Upload_File_Directory()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25048621400,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "Steps.i_click_on_submit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5065435500,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Click on Refresh button",
+            "match": {
+              "location": "Steps.i_click_on_refresh_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5062405400,
+              "status": "passed"
+            },
+            "line": 36,
             "name": "Click on Tasks Tab",
             "match": {
               "location": "Steps.I_Click_on_tasks_tab()"
@@ -194,23 +290,38 @@
           },
           {
             "result": {
-              "duration": 5143296800,
+              "duration": 2569888100,
               "status": "passed"
             },
-            "line": 29,
-            "name": "Click on the TitleSpreadsheet",
+            "line": 37,
+            "name": "Click on Submit",
             "match": {
-              "location": "Steps.i_click_on_title_spreadsheet()"
+              "location": "Steps.i_click_on_submit()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 3061637100,
+              "status": "passed"
             },
-            "line": 30,
-            "name": "Enter email or phone",
-            "match": {},
+            "line": 38,
+            "name": "Click on Yes to Confirmation popup",
+            "match": {
+              "location": "Steps.i_click_on_confirmation_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2560496500,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Click on Search Tab",
+            "match": {
+              "location": "Steps.i_click_on_search_tab()"
+            },
             "keyword": "And "
           }
         ],

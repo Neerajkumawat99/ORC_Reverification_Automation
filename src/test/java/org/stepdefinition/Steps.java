@@ -4,6 +4,7 @@ import com.github.dockerjava.api.model.HealthCheck;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en_scouse.An;
+//import jdk.jpackage.internal.Log;
 import net.bytebuddy.pool.TypePool;
 import org.apache.http.cookie.ClientCookie;
 import org.apache.log4j.Logger;
@@ -21,6 +22,8 @@ import com.aventstack.extentreports.GherkinKeyword;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+//import sun.jvm.hotspot.debugger.Page;
+//import sun.jvm.hotspot.debugger.Page;
 //import sun.jvm.hotspot.debugger.Page;
 //import sun.jvm.hotspot.debugger.Page;
 
@@ -57,7 +60,6 @@ public class Steps extends Global {
 //        clickButton(PageObjectManager.getInstance().getLoginPage().getFirstReverifyLink());
 //        Thread.sleep(2000);
 //    }
-
 
 
 //    @Given("Launch the url")
@@ -330,5 +332,22 @@ public class Steps extends Global {
 //        System.out.println("Switched To Parent Window - The Title Of Window is: " + driver.getTitle());
 //    }
 
-
+    @When("Click on Submit")
+    public void i_click_on_submit() throws Throwable {
+        clickButton(PageObjectManager.getInstance().getLoginPage().button());
+        log.info("user clicked on submit button");
+        Thread.sleep(2500);
+    }
+    @When("Click on Yes to Confirmation popup")
+    public void i_click_on_confirmation_button() throws Throwable{
+        clickButton(PageObjectManager.getInstance().getLoginPage().ConfirmationYes());
+        log.info("User clicked on Yes to Confirmation popup");
+        Thread.sleep(3000);
+    }
+    @When("Click on Search Tab")
+    public void i_click_on_search_tab() throws Throwable{
+        clickButton(PageObjectManager.getInstance().getLoginPage().SearchTab());
+        log.info("user clicked on Search tab");
+        Thread.sleep(2500);
+    }
 }

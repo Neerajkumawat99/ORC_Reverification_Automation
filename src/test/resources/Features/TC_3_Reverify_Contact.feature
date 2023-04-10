@@ -25,14 +25,23 @@ Feature: Validate reverify contact page
 
   @First @Smoke @Reg
   Scenario: To validate reverification page
-    And Click on Tasks Tab
-    And Click on the TitleSpreadsheet
+    When User Click on reverifycontact Button
+    And User click on CreateNewJob Button
+    And User enter jobname
+    And User Select Priority
+    Then Click On Browse Button
+    And Upload File From Local Directory
     And Click on Submit Button
+    And Click on Refresh button
+    And Click on Tasks Tab
+    And Click on Submit
+    And Click on Yes to Confirmation popup
     And Click on Search Tab
-    And select ReverifyContact Radio button
-    And Click on Activity href
-    And Enter email id in Search by Contact Email
+#    And select ReverifyContact Radio button
+#    And Click on Activity href
+#    And Enter email id in Search by Contact Email
 #    And Enter email or phone
+#    And Click on the TitleSpreadsheet
 
 #    When User Click on reverifycontact Button
 #    And User click on CreateNewJob Button
