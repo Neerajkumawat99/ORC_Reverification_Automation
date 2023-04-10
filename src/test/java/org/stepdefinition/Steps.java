@@ -399,7 +399,11 @@ public class Steps extends Global {
     }
 
     @When("Click on Search Tab")
+<<<<<<< HEAD
     public void i_click_on_search_tab() throws Throwable {
+=======
+    public void i_click_on_search_tab() throws Throwable{
+>>>>>>> origin/master
         log.info("user clicked on Search tab");
         Thread.sleep(2500);
     }
